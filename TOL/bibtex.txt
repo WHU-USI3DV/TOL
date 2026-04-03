@@ -1,0 +1,9 @@
+@misc{liao2026toltextuallocalizationopenstreetmap,
+      title={TOL: Textual Localization with OpenStreetMap}, 
+      author={Youqi Liao and Shuhao Kang and Jingyu Xu and Olaf Wysocki and Yan Xia and Jianping Li and Zhen Dong and Bisheng Yang and Xieyuanli Chen},
+      year={2026},
+      eprint={2604.01644},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.01644}, 
+}

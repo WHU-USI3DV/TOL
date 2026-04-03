@@ -1,0 +1,162 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>TOL: Textual Localization with OpenStreetMap </title>
+  <link href="./TOL/style.css" rel="stylesheet">
+  <script type="text/javascript" src="./TOL/jquery.mlens-1.0.min.js"></script>
+  <script type="text/javascript" src="./TOL/jquery.js"></script>
+  <style>
+    .divider {
+      border-right: 2px dashed #737373;
+      width: 2px;
+    }
+  </style>
+  <style>
+    .divider_horizontal {
+      border-top: 2px dashed #737373;
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div class="content">
+    <h1><strong>TOL: Textual Localization with OpenStreetMap</strong>
+    </h1>
+    <p id="authors">
+      <span>
+        <a href="https://martin-liao.github.io/">Youqi Liao<sup>1</sup></a>
+      </span>
+      <span>
+        <a href="https://kang-1-2-3.github.io/">Shuhao Kang<sup>2</sup></a>
+      </span>
+      <span>
+        <a href="https://kevinxu-01.github.io/home/">Jingyu Xu<sup>3</sup></a>
+      </span>
+       <span>
+        <a href="https://olafwysocki.github.io/">Olaf Wysocki<sup>4</sup></a>
+      </span>
+      <span>
+        <a href="https://yan-xia.github.io/">Yan Xia<sup>5</sup></a>
+      </span>
+      <br>
+      <span>
+        <a href="https://jianping.xyz/">Jianping Li<sup>6,&dagger;</sup></a>
+      </span>
+      <span>
+        <a href="https://dongzhenwhu.github.io/index.html">Zhen Dong<sup>1</sup></a>
+      </span>
+      <span>
+        <a href="https://3s.whu.edu.cn/info/1025/1415.htm">Bisheng Yang<sup>1</sup></a>
+      </span>
+      <span>
+        <a href="https://chen-xieyuanli.github.io/">Xieyuanli Chen<sup>7</sup></a>
+      </span>
+      <br>
+      <span class="institution">
+        <a href="https://en.whu.edu.cn/"><sup>1</sup> Wuhan University</a> 
+        <a href="https://www.tum.de/"><sup>2</sup> Technical University of Munich</a> 
+        <a href="https://www.teleai.com.cn/"><sup>3</sup> Institute of Artificial Intelligence (TeleAI), China Telecom</a> 
+        <br> 
+        <a href="https://www.ntu.edu.sg/"><sup>4</sup> Nanyang Technological University</a> 
+        <a href="https://cv4dt.github.io/"><sup>5</sup> University of Cambridge </a> 
+        <a href="https://www.ustc.edu.cn/"><sup>6</sup> University of Science and Technology of China</a>
+        <a href="https://english.nudt.edu.cn/"><sup>7</sup> National University of Defense Technology</a></span>  
+        <sup>&dagger;</sup>Corresponding author. &nbsp;&nbsp; 
+    </p>
+    <font size="+3">
+      <p style="text-align: center;">
+        <a href="https://arxiv.org/abs/2604.01644" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a  target="_blank">[Video]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/WHU-USI3DV/TOL" target="_blank">[Code]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="TOL/bibtex.txt" target="_blank">[BibTeX]</a>
+      </p>
+    </font>
+    
+    <h3>
+      <center>What can TOL do?</center>
+    </h3>
+    <img src="./TOL/illustration.png" class="teaser-gif" style="width:100%"><br>
+    <a style="text-align:center">
+      TOL is able to <strong> localize the text query in a city-scale OSM database with meter-level accurayc. </strong>  (a) Text-to-OSM localization 
+      retrieves the most similar OSM tile from the database first, and then estimates the accurate 2-DoF position later. (b) shows the difference with existing methods. Compared with
+    text-to-point-cloud localization methods, OSM data is much lighter in data
+      construction, storage, and updates. Compared with existing text-driven place
+      recognition methods, our approach focuses on global localization with meterlevel 
+      accuracy, instead of simply retrieving OSM tiles from textual queries.
+      This enables finer-grained spatial understanding and more precise localization beyond tile-level retrieval.
+  </a>
+  </div>
+
+
+  <div class="content">
+    <h2 style="text-align:center;">Abstract</h2>
+    <p>Natural language provides an intuitive way to express spatial intent in geospatial 
+      applications. While existing localization methods often rely on dense point cloud maps 
+      or high-resolution imagery, OpenStreetMap (OSM) offers a compact and freely available 
+      map representation that encodes rich semantic and structural information, making it 
+      well suited for large-scale localization. However, text-to-OSM (T2O) localization 
+      remains largely unexplored. In this paper, we formulate the T2O global localization 
+      task, which aims to estimate accurate 2 degree-of-freedom (DoF) positions in urban 
+      environments from textual scene descriptions without relying on geometric observations 
+      or GNSS-based initial location. To support the proposed task, we introduce TOL, a 
+      large-scale benchmark spanning multiple continents and diverse urban environments. 
+      TOL contains approximately 121K textual queries paired with OSM map tiles and covers 
+      about 316 km of road trajectories across Boston, Karlsruhe, and Singapore. We further 
+      propose TOLoc, a coarse-to-fine localization framework that explicitly models the 
+      semantics of surrounding objects and their directional information. In the coarse 
+      stage, direction-aware features are extracted from both textual descriptions and 
+      OSM tiles to construct global descriptors, which are used to retrieve candidate 
+      locations for the query. In the fine stage, the query text and top-1 retrieved 
+      tile are jointly processed, where a dedicated alignment module fuses textual 
+      descriptor and local map features to regress the 2-DoF pose. Experimental 
+      results demonstrate that TOLoc achieves strong localization performance, 
+      outperforming the best existing method by 6.53%, 9.93%, and 8.31% at 5m, 
+      10m, and 25m thresholds, respectively, and shows strong generalization to 
+      unseen environments.  </p>
+  </div>
+
+  <div class="content">
+    <h2>Introduction Video</h2>
+    <p>Comming soon!</p>
+    <video width="100%" controls autoplay control src="TOL/tol.mp4" ></video>
+  </div>
+
+
+  <div class="content">
+    <h2>Place recognition & Localization results</h2>
+    <img class="summary-img" src="./TOL/qualitative_results.png" style="width:100%;">
+    <a>
+     <!--
+      <strong>(a)</strong> Input RGB images and point clouds for registration. 
+      <strong>(b)</strong> Estimated correspondences from the baseline method I2P-Matr. <br>
+      <strong>(c-e)</strong> Estimated correspondences by nearest neighborhood (NN) matcher utilizing Diffusion (FreeReg-D) / Geometric (FreeReg-G) / Fused features (FreeReg).
+     -->
+    </a>
+    <br><br>
+
+
+  <div class="content">
+    <h2>BibTex</h2>
+    <code> @misc{liao2026toltextuallocalizationopenstreetmap,
+      title={TOL: Textual Localization with OpenStreetMap}, 
+      author={Youqi Liao and Shuhao Kang and Jingyu Xu and Olaf Wysocki and Yan Xia and Jianping Li and Zhen Dong and Bisheng Yang and Xieyuanli Chen},
+      year={2026},
+      eprint={2604.01644},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.01644}, 
+} </code>
+  </div>
+  <div class="content" id="acknowledgements">
+    <p><strong>Acknowledgements</strong>:
+      We borrow this template from <a href="https://whu-usi3dv.github.io/FreeReg/">FreeReg</a>.
+    </p>
+  </div>
+</body>
+
+</html>
