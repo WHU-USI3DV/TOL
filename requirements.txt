@@ -1,0 +1,13 @@
+einops
+matplotlib
+numpy
+opencv-python
+pillow
+pyproj
+scipy
+torch
+torchvision
+tqdm
+transformers
+nuscenes-devkit
+tensorboard
