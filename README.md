@@ -7,7 +7,7 @@ This is the official PyTorch implementation of the following publication:
 > **TOL: Textual Localization with OpenStreetMap**<br/>
 > [Youqi Liao](https://martin-liao.github.io/), [Shuhao Kang](https://kang-1-2-3.github.io/), [Jingyu Xu](https://kevinxu-01.github.io/home/), [Olaf Wysocki](https://olafwysocki.github.io/), [Yan Xia](https://yan-xia.github.io/), [Jianping Li](https://jianping.xyz/), [Zhen Dong](https://dongzhenwhu.github.io/index.html), [Bisheng Yang](https://3s.whu.edu.cn/info/1025/1415.htm),[Xieyuanli Chen](https://chen-xieyuanli.github.io)<br/>
 > *Tech Repo*<br/>
-> **Paper** | [**Arxiv**](https://arxiv.org/abs/2604.01644) | [**Project-page**](https://whu-usi3dv.github.io/TOL/) | [**Video**](https://youtu.be/Sz2qG8KKEgw)
+> [**Paper**](https://ieeexplore.ieee.org/abstract/document/11661756/) | [**Arxiv**](https://arxiv.org/abs/2604.01644) | [**Project-page**](https://whu-usi3dv.github.io/TOL/) | [**Video**](https://youtu.be/Sz2qG8KKEgw)
 
 
 ## 🔭 Introduction
